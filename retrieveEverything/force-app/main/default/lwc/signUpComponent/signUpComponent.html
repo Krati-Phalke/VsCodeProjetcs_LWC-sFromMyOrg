@@ -1,0 +1,57 @@
+<template>
+    <lightning-card title= "Registration" icon-name="standard:logging" >
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-layout-item padding="around-small" align="center">
+                <div class="header-column" >
+            <lightning-input type="text" label="Name" placeholder="Enter Name" 
+            value={EmployeeObj.nameField} align="center" name="nameField" onchange={empNameChange} required></lightning-input>
+            </div>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+            <div class="header-column">
+            <lightning-input type="email" class="textInput" label="Email" placeholder="Enter Email" 
+            value={EmployeeObj.emailField} align="center" name="emailField" onchange={empEmailChange} required></lightning-input>
+            </div>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+                <div class="header-column">
+            <lightning-input type="phone" label="Phone" placeholder="Enter Phone" 
+            value={EmployeeObj.phoneField} align="center" name="phoneField" 
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}$" message-when-pattern-mismatch="Please enter a valid phone number"
+            onchange={empPhoneChange} required></lightning-input>
+            </div></lightning-layout-item>
+        
+            <lightning-layout-item padding="around-small">
+            <div class="header-column">
+            <lightning-input type="text" label="UserName" placeholder="Enter Username"
+            value={EmployeeObj.usernameField} align="center" name="usernameField" onchange={empUserNameChange} required>
+        </lightning-input>
+        </div></lightning-layout-item>
+
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+            <lightning-input type="password" label="Password" placeholder="Enter Password"
+            value={EmployeeObj.passwordField} align="center" name="passwordField" 
+            pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required 
+            onchange={empPasswordChange}></lightning-input>
+            </div>
+            </lightning-layout-item>
+        
+        <!-- <lightning-layout-item padding="around-small">
+            <div class="header-column">
+                <lightning-input type="password" label="Re-enter Password" placeholder="Re-enter Password"
+                value={confirmPassword} align="center" name="passwordField" 
+                required 
+                onchange={matchPassword}></lightning-input>
+                </div>
+                </lightning-layout-item>-->
+           </lightning-layout-item>
+        </lightning-layout>    
+        
+    <lightning-button variant="brand" label="SignUp" title="SignUp" class="my-brand" onclick={submitAction}>
+    </lightning-button>    
+</lightning-card>
+</template>

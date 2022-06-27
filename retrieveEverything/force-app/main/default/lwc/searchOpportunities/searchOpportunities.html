@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="search opp">
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Search ny name" onchange={handleKeySearch}></lightning-input><br>
+        <lightning-button variant="success" label="Success" onclick={handleSearch}></lightning-button>
+        </div>
+        <div>
+            <template for:each={fetchOpp} for:item="display">
+               Opportunity ID: <h1 key={display.ID}>{display.ID}</h1> 
+               Name: <h1 key={display.Name}>{display.Name}</h1>
+            <!--{fetchOpp.StageName}
+            {fetchOpp.Description}-->
+        </template>
+        </div>
+    </lightning-card>
+</template>

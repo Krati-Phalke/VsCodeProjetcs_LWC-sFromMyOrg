@@ -1,0 +1,11 @@
+<template>
+
+    <lightning-card title="display Accounts">
+        <template for:each={gettingacc} for:item= "display">
+            <p key={display.Id}>{display.Id}</p>
+            <p key={display.Id}>{display.Name}</p>
+            <p key={display.Id}>{display.Type}</p>
+            <p key={display.Id}>{display.Phone}</p>
+        </template>
+    </lightning-card>
+</template>

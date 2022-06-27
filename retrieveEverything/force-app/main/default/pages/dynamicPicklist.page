@@ -1,0 +1,7 @@
+<apex:page controller="dynamicpicklist">
+    <apex:form >
+      <apex:selectList size="1">
+          <apex:selectOptions value="{!dynamiclist}"></apex:selectOptions>
+      </apex:selectList>
+  </apex:form>
+</apex:page>

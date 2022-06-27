@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Picklist Value Component" icon-name="custom:custom65">
+    <div class="slds-p-horizontal_medium">
+         <lightning-combobox name="types" label="Select Class" value={value} options={TypeOptions} onchange={handleTypeChange}> </lightning-combobox><br><br>
+         <lightning-button variant="success" label="Parse" onclick={handleSearch}></lightning-button> 
+    </div>
+    <div>
+      <h1>here is my output {findBody}</h1>
+      <template for:each={findBody} for:item="display">
+      <h1 key={display.ID}>{display.Id}</h1>
+       <h2 key={display.ID}>This is class body</h2>
+    <lightning-formatted-text value={display.Body} key={display.ID}></lightning-formatted-text>
+     <!--  <p key={display.Body}>{display.Body}</p>-->
+        </template>
+    </div>
+  </lightning-card>
+</template>

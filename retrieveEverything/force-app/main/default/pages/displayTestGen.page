@@ -1,0 +1,24 @@
+<apex:page controller="TestGeneratorCommonController">
+    <apex:form >
+     <!--    <apex:pageBlock>
+        <apex:pageBlockSection title="Select class" >
+            <apex:selectList value="{!listAcc}" multiselect="false" size="1">
+                <apex:selectOptions value="{!listAcc}"/>
+            </apex:selectList>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+         <apex:pageBlock/>
+<apex:pageBlockSection title="Select class" columns="1"/>-->
+                <apex:selectList size="1" >        
+            <apex:selectOptions value="{!listAcc}">
+            </apex:selectOptions>
+        </apex:selectList>
+      <!--   <apex:pageBlock>
+           <apex:pageBlockTable value="{!apexclassList}" var="apexclass">
+           <apex:column >
+           <apex:outputField value="{!getclassList()}"/>
+           </apex:column>
+           </apex:pageBlockTable>
+        </apex:pageBlock>-->
+    </apex:form>
+</apex:page>

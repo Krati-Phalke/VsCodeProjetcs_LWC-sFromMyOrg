@@ -1,0 +1,9 @@
+.greeting{
+    color:maroon;
+    font-size:medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+div{
+  border: 3px olive;
+  color:midnightblue;
+}

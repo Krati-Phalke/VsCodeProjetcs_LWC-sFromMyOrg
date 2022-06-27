@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+    <h3 slot="title">
+        <lightning-icon icon-name="standard:address" alternative-text="Address" title="Address"></lightning-icon>
+         Employee Data
+    </h3>
+    <lightning-tabset>
+        <lightning-tab label="Personal Details">
+           <lightning-messages>
+        </lightning-messages>
+        <lightning-input label="Fathers name" value={fatherName} onchange={handleChange}></lightning-input>
+        <lightning-input label="Marital status" value={maritalStatus} onchange={handleChange1}></lightning-input>
+        <lightning-input label="Permanent Address" value={addressField} onchange={handleChange2}></lightning-input>
+        <lightning-button class="slds-m-top_small" type="submit" label="Fill Detils" onclick={handleSuccess}>
+        </lightning-button>
+</lightning-tab>
+<lightning-tab label="Education Details">
+    <!--<lightning-record-edit-form object-api-name="Employee__c" onsuccess={handleSuccess} onsubmit ={handleSubmit}>
+        </lightning-record-edit-form>-->
+</lightning-tab>
+<lightning-tab label="Review">
+    <h1>Please review your information below:</h1>
+    <p>Father Name: {fatherName}</p>
+    <p>Marital Status: {maritalStatus}</p>
+    <p>Address: {addressField}</p>
+</lightning-tab>
+</lightning-tabset>
+    </lightning-card>
+</template>

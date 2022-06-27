@@ -1,0 +1,36 @@
+.section-astro {
+    --slds-c-badge-color-background: #0C9DDA;
+    --slds-c-badge-text-color: #FFFFFF;
+  }
+  
+  .section-codey {
+    --slds-c-badge-color-background: #BB00FF;
+    --slds-c-badge-text-color: #F4F7F9;
+  }
+  
+  .special {
+    --slds-c-badge-color-background: #FF538A;
+    --slds-c-badge-text-color: #111111;
+  }
+
+  .app {
+    --example-c-fancy-greeting-color-background: #EEEEEE;
+    --example-c-fancy-greeting-text-color: #111111;
+  }
+
+/*.app{
+    --slds-c-badge-color-background: #0C9DDA;
+  --slds-c-badge-text-color: #FFFFFF;
+}*/
+
+.my-brand {
+    --sds-c-button-brand-color-background: purple;
+}
+
+.slds-form-element__label{
+    color: rgb(207, 207, 65);
+    font-style: bold;
+}
+.myColor.THIS  {
+    background: red;
+}

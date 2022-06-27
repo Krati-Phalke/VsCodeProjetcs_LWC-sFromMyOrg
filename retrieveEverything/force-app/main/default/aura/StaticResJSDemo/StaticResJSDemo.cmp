@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <ltng:require scripts="{!$Resource.StaticResoiurceJS}"/>
+    
+    <aura:attribute name="externalFruitList" type="Array"></aura:attribute>
+    <div>
+        <p>
+            Click on the button to display the fruit list...
+        </p>
+        <lightning:button label="Display Fruits" variant="brand" onclick="{!c.getFruits}"></lightning:button>
+        
+        <aura:iteration items="{!v.externalFruitList}" var="temp">
+        
+          <p>{!temp}</p>
+        
+        </aura:iteration>
+    </div>
+</aura:component>

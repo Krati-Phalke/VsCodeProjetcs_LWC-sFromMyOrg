@@ -1,0 +1,47 @@
+<template>
+    <lightning-card  title="Resgistration Page" class="'slds-box">
+       <lightning-layout multiple-rows>
+           <lightning-layout-item padding="around-small" size="3">
+                   <lightning-layout-item padding="around-small" >
+                               <div class="header-column">
+                               <lightning-input type="text" label="Name"  placeholder="Enter Name"  onchange={onInput}
+                                 name="nameField" ></lightning-input>
+                               </div>
+                   </lightning-layout-item>
+               
+                  <lightning-layout-item padding="around-small">
+                           <div class="header-column">
+                               <lightning-input type="email" label="Email" placeholder="Enter Email" 
+                              name="emailField"   onchange={onInput}></lightning-input>
+                           </div>
+                  </lightning-layout-item>
+                
+                   <lightning-layout-item padding="around-small">
+                               <div class="header-column">
+                                   <lightning-input type="phone" label="Phone" placeholder="Enter Phone" 
+                                    name="phoneField"  onchange={onInput} ></lightning-input>
+                               </div>
+                   </lightning-layout-item>
+    
+                     <lightning-layout-item padding="around-small">
+                               <div class="header-column">
+                                <lightning-input type="text" label="UserName" placeholder="Enter Username"
+                              name="usernameField"  onchange={onInput} ></lightning-input>
+                               </div>
+                           </lightning-layout-item>
+                   
+                    <lightning-layout-item padding="around-small">
+                              <div class="header-column">
+                                    <lightning-input type="text" label="Password" placeholder="Enter Password"
+                                  name="passwordField"  onchange={onInput}></lightning-input>
+                              </div>
+                          </lightning-layout-item>
+    
+                   
+                 </lightning-layout-item>
+          </lightning-layout>
+          <div class="header-column">
+           <lightning-button type="brand" label="Submit" variant="brand" size="small" onclick={submitAction}></lightning-button>
+         </div>
+   </lightning-card>
+</template>

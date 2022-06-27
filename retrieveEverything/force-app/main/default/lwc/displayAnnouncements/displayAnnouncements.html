@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Display Announcements" icon-name="standard:announcement">
+        <div class="slds-m-around_medium">
+
+                <template if:true={announcementList}>
+                     <lightning-datatable
+                             key-field="id"
+                             data={announcementList}
+                             columns={columns}>
+                     </lightning-datatable>
+                </template>
+
+        </div>
+    </lightning-card> 
+</template>

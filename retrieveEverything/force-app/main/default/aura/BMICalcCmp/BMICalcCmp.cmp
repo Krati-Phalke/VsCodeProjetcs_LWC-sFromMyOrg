@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+   
+    <aura:attribute name="checkbmi" type="Integer" />
+    <aura:attribute name="resultlist" type="List" />
+    <aura:attribute name="previousResChk" type="Boolean" />
+    <lightning:input type="Integer" name="input1" aura:id="height" label="Enter height in meters" />
+    <lightning:input type="Integer" name="input1" aura:id="weight" label="Enter weight in kgs" />
+    
+    <br></br>
+    <lightning:button variant="brand" label="Submit" title="Brand action" iconName="utility:resource_capacity" 
+                      iconPosition="right" onclick="{!c.onSubmit }" />
+    <br></br>
+    <br></br>
+    <lightning:input type="checkbox" aura:id="prsChk" label="Click To Show the previous BMI values" 
+                     onchange="{!c.doChange}" />
+    <br></br>
+    The BMI value is: {!v.checkbmi}
+    <br></br>
+    <aura:if isTrue="{!v.previousResChk}">
+        <aura:iteration items="{!v.resultlist}" var="prev">
+        {!prev}<br></br>
+        </aura:iteration>
+    </aura:if>
+</aura:component>

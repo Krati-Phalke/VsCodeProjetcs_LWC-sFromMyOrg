@@ -1,0 +1,46 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="EmpName" type="String"/>
+    <aura:attribute name="EmpAge" type="String"/>
+    <aura:attribute name="EmpJoiningDate" type="String"/>
+    <aura:attribute name="EmpGender" type="String"/>
+    <aura:attribute name="EmpInts" type="String"/>
+    <aura:attribute name="EmpCity" type="String"/>
+    
+    <lightning:input type="text" name="input1" aura:id="empName" label="Enter Employee Name" />
+<lightning:input type="text" name="input1" aura:id="empAge" label="Enter Employee Age" />
+<lightning:input type="date" name="input1" aura:id="joinDate" label="Select Employee Joining Date" />
+<aura:attribute name="options" type="List" default="[
+{'label': 'Male', 'value': 'M'},
+{'label': 'Female', 'value': 'F'}
+]"/>
+    <aura:attribute name="value" type="String" default="option1"/>
+<lightning:radioGroup name="radioGroup"
+                      aura:id="gender"
+label="Employee Gender"
+options="{! v.options }"
+value="{! v.value }"
+type="radio"/>
+    
+<lightning:select name="select1" aura:id="mygroup" label="Employee City" required="true">
+<option value="">--None--</option>
+<option value="Hyderabad">Hyd</option>
+<option value="Pune">Pune</option>
+<option value="Banglore">Banglore</option>
+    </lightning:select>
+    <br></br>
+    <lightning:input type="checkbox" aura:id="intChk" label="Employee is ready to relocate or not" />
+    <br></br>
+    <lightning:button variant="brand" label="Submit" title="Brand action" onclick="{! c.onSubmit }" />
+    <br></br>
+    The employee Name is ---> {!v.EmpName}
+<br></br>
+The employee age is ---> {!v.EmpAge}
+<br></br>
+The Employee Joining Date is ---> {!v.EmpJoiningDate}
+<br></br>
+The Employee is agreed on relocation --> {!v.EmpInts}
+    <br></br>
+    Employee gender --->{!v.EmpGender}
+    <br></br>
+    Employee city ---->{!v.EmpCity}
+</aura:component>

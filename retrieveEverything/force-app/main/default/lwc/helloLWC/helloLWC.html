@@ -1,0 +1,11 @@
+<template>
+    
+    <div class="greeting">Hello {dynamicGreeting}</div>
+    <div>This is practising css from external file</div>
+    <div style="background-color:teal; color:thistle;">This is inline CSS</div>
+    
+    <lightning-input type="text" name="input1" label="Greeting" onchange={getTextValue}></lightning-input>
+    <lightning-button variant="brand" label="Brand" title="Save" onclick={greetingChange} class="slds-m-left_x-small"></lightning-button>
+      <!-- variant available (Neutral (Default), Base, Brand, Brand Outline, Destructive, Destructive Text, Success, inverse) -->  
+    
+</template>

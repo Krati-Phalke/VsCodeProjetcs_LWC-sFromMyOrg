@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="Result" type="Integer" />
+    <aura:attribute name="PrsRslt" type="List" />
+    <aura:attribute name="prsCheckResult" type="Boolean" />
+    <lightning:input label="Enter First Number" type="text" aura:id="fNumber" />
+    <lightning:input label="Enter second Number" type="text" aura:id="sNumber" />
+    <br></br>
+    <lightning:button iconName="utility:add" iconPosition="right" label="Add" aura:id="Add" onclick="{!c.doOperation}" />
+    <lightning:button iconName="utility:dash" iconPosition="right" label="sub" aura:id="sub" onclick="{!c.doOperation}" />
+    <lightning:button iconName="utility:close" iconPosition="right" label="mul" aura:id="mul" onclick="{!c.doOperation}" />
+    <lightning:button iconName="utility:magicwand" iconPosition="right" label="Div" aura:id="div" onclick="{!c.doOperation}" />
+<br></br>
+    <br></br>
+    <lightning:input type="checkbox" aura:id="prsCheck" label="Click To Show the previous history" onchange="{!c.doChange}" />
+    <br></br>
+     The Result is: {!v.Result}    
+    <br></br>
+    <aura:if isTrue="{!v.prsCheckResult}">
+    <aura:iteration items="{!v.PrsRslt}" var="prs">
+     {!prs} <br></br>
+    </aura:iteration>
+    </aura:if>
+
+</aura:component>

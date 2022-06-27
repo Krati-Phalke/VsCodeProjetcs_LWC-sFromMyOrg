@@ -1,0 +1,6 @@
+<apex:page controller="siteURL">
+    
+    <apex:repeat value="{!siteurl}" var="s">
+        {!s}<br/>
+    </apex:repeat>
+</apex:page>

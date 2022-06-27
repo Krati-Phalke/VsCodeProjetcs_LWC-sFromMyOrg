@@ -1,0 +1,17 @@
+<aura:component controller="AccListCriteriaBasisController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="accList" type="Account[]" />
+    
+    <lightning:input label="Enter account name" type="text" aura:id="accName" />
+    <br></br>
+    <lightning:input label="Enter acc phone number" type="text" aura:id="phoneNumb" />
+    <br></br>
+    <lightning:button label="Click Me" onclick="{!c.doGetAccounts}" />
+    <br></br>
+    <br></br>
+    <aura:iteration items="{!v.accList}" var="acc" >
+        <b>The account details are :</b>
+      {!acc.Id} &nbsp;&nbsp; {!acc.Name} &nbsp;&nbsp; {!acc.Phone} &nbsp;&nbsp; {!acc.AccountNumber} &nbsp;&nbsp; {!acc.Industry} <br></br> 
+    </aura:iteration>
+    
+</aura:component>

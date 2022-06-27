@@ -1,0 +1,22 @@
+   <template>
+  <div class="c-container">
+            <lightning-input type="search" onchange={handleKeySearch} class="slds-m-bottom_small" label="Search by name"
+               value={searchKey}></lightning-input><br><br>
+             <p class="slds-m-bottom_small">
+             <lightning-button variant="success" label="Search" onclick={handleSearch}></lightning-button>
+             </p>                 
+             <h3><b>Search Result will appear here:</b></h3><br>
+              <template for:each={findEmp} for:item="display">
+              <li key={display.ID}>
+                <span> Employee Name</span><br>
+                <div class="slds-box"><div class="slds-text-link"><a href={recordPageUrl}>{display.Name}</a></div></div><br>
+                <span> Employee Phone Number</span><br>
+                <div class="slds-box"><div class="slds-text-link"><a href={recordPageUrl}>{display.Phone_Number__c}</a></div></div><br>
+                <span> Leave status</span><br>
+                <div class="slds-box"><div class="slds-text-link"><a href={recordPageUrl}>{display.Leave_Status__c}</a></div></div><br>
+
+              <br><br>
+              </li>        
+            </template>
+    </div>
+</template>

@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="addition" type="Integer" />
+    <aura:attribute name="chkCheck" type="Boolean" />
+    
+    <lightning:input type="Integer" name="input1" aura:id="fNum" label="Enter first number" />
+<lightning:input type="Integer" name="input1" aura:id="sNum" label="Enter second number" />
+    <br></br>
+    <lightning:button variant="brand" label="Add" title="Brand action" iconName="utility:add" iconPosition="right" 
+                      onclick="{! c.onSubmit }" />
+    
+    <br></br>
+    <br></br>
+    <lightning:input type="checkbox" iconName="utility:activity" aura:id="resCheck" 
+                     onchange="{!c.doChange}" label="Select to display the result" />
+    <br></br>
+    <aura:if isTrue="{!v.chkCheck}">
+      The sum is ----> {!v.addition}
+       <aura:set attribute="else">
+         Please select check box to display the result
+       </aura:set>
+    </aura:if>
+</aura:component>

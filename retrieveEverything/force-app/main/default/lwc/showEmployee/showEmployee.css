@@ -1,0 +1,41 @@
+.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+}
+.page-section {
+    border: solid 1px #ccc;
+    padding: 1rem;
+}
+.page-header,
+.page-footer {
+    height: 50px;
+}
+.page-main {
+    background: #f8f8f8;
+}
+.page-left,
+.page-right {
+    background: #f0efef;
+}
+button {
+	border: black;
+	padding: 1.1em 6.5em;
+	background: #7bb0b8;
+	color: #fff;
+	font-family: 'TitilliumText22LRegular', Arial, sans-serif;
+	font-weight:bold;
+	font-size: 1.1em;
+	border-radius: 12px;
+   width: 100%; 
+}
+li {
+    list-style-type: none;
+   }
+
+.slds-box{
+    width: 80%;  
+    padding-right:1.1em 6.5em ;
+}
+/**a{
+  padding-left: 90%;
+}*/

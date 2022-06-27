@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+    <ltng:require styles="{!$Resource.StaticResource}"/>
+    
+    <p>This is my paragraph tag get css from static resource</p>
+    
+    <div class="divStyle">This is div tag, get css from static resource </div>
+</aura:component>

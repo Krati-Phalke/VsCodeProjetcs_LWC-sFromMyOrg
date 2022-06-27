@@ -1,0 +1,29 @@
+<template>
+    <div class="c-container">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small" size="12">
+                <div class="page-section page-header">
+                    <h2>Create Opportunity</h2>
+                    <!--<lightning-combobox name="types" label="Select Account" value={value} options={findAcc} 
+                    onchange={handleTypeChange}> </lightning-combobox><br><br>
+                    <lightning-button variant="success" label="Select Account" onclick={handleSearch}></lightning-button> -->
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="12">
+                        <div class="page-section page-right">
+                           <!-- <h2>Left Sidebar</h2> <p></p>-->
+                         <lightning-record-form object-api-name={opportunityObject} fields={showfeilds}></lightning-record-form>
+                        </div>
+                    </lightning-layout-item>    
+                 </lightning-layout>
+             </lightning-layout-item>   
+             <lightning-layout-item flexibility="auto" padding="around-small" size="12">
+                <div class="page-footer page-section">
+                    <h2>All copy right reserved</h2>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

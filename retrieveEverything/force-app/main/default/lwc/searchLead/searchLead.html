@@ -1,0 +1,25 @@
+<template>
+    <div class="slds-grid slds-wrap slds-m-bottum_large">
+        <!-- <div class="slds-col slds-size_8-of-12">
+          <span>Search Leads</span>
+        </div> -->
+        <div class="slds-col slds-size_10-of-12">
+            <lightning-input type="text" label="Enter Mobile, Email"
+                placeholder="Example:John or john@gmail.com or 1234567890" value={searchKey} onchange={handleKeySearch}>
+        </lightning-input>
+</div>
+<div class="slds-col slds-size_2-of-12 slds-m-top_large">
+    <lightning-button variant="brand" label="Search" title="Search" onclick={getSearchResult}
+        class="slds-m-left_x-small"></lightning-button>
+</div>
+</div>
+<div class="slds-m-top_large">
+<template if:true={leads}>
+<lightning-datatable data={leads} columns={columns} key-field="id" hide-checkbox-column show-row-number-column>
+</lightning-datatable>
+</template>
+<template if:false={leads}>
+{error}
+</template>
+</div>
+</template>
